@@ -1,7 +1,4 @@
 
-
-// 1. Encontrar os elementos da página
-
 const form = document.querySelector("#story-form");
 const localSelect = document.querySelector("#local");
 const monstroSelect = document.querySelector("#monstro");
@@ -17,7 +14,7 @@ const againButton = document.querySelector("#again-button");
 const copyStatus = document.querySelector("#copy-status");
 
 
-// 2. Descrições dos locais
+
 
 const locais = {
     casa: {
@@ -67,7 +64,6 @@ const locais = {
 };
 
 
-// 3. Descrições dos monstros
 
 const monstros = {
     vampiro: {
@@ -142,7 +138,6 @@ const monstros = {
 };
 
 
-// 4. Descrições das personagens
 
 const personagens = {
     estudante: {
@@ -192,7 +187,7 @@ const personagens = {
 };
 
 
-// 5. Escolher um elemento aleatório
+
 
 function escolherAleatorio(lista) {
     const indice = Math.floor(Math.random() * lista.length);
@@ -200,7 +195,6 @@ function escolherAleatorio(lista) {
 }
 
 
-// 6. Construir a história
 
 function gerarHistoria() {
     const local = locais[localSelect.value];
@@ -208,7 +202,7 @@ function gerarHistoria() {
     const personagem = personagens[personagemSelect.value];
     const tipoFinal = finalSelect.value;
 
-    // Escolher frases diferentes em cada geração
+
 
     const inicio = escolherAleatorio(personagem.inicio);
     const ambiente = escolherAleatorio(local.ambiente);
@@ -218,7 +212,7 @@ function gerarHistoria() {
     let titulo = "";
     let fim = "";
 
-    // Escolher o desfecho
+   
 
     if (tipoFinal === "feliz") {
         titulo = "An Impossible Escape";
@@ -268,7 +262,7 @@ function gerarHistoria() {
         ]);
     }
 
-    // Criar os parágrafos da história
+    
 
     const paragrafos = [
         `It was a dark night when a ${personagem.nome} arrived at the ${local.nome}. ${inicio}`,
@@ -289,18 +283,18 @@ function gerarHistoria() {
 }
 
 
-// 7. Mostrar a história no site
+
 
 function mostrarHistoria() {
     const historia = gerarHistoria();
 
     storyTitle.textContent = historia.titulo;
 
-    // Apagar os parágrafos da história anterior
+  
 
     storyText.replaceChildren();
 
-    // Criar um parágrafo HTML para cada parte da história
+   
 
     historia.paragrafos.forEach(function(texto) {
         const paragrafo = document.createElement("p");
@@ -310,13 +304,13 @@ function mostrarHistoria() {
         storyText.appendChild(paragrafo);
     });
 
-    // Mostrar a caixa da história
+    
 
     storyBox.hidden = false;
 
     copyStatus.textContent = "";
 
-    // Deslocar a página até à história
+    
 
     storyBox.scrollIntoView({
         behavior: "smooth",
@@ -325,7 +319,7 @@ function mostrarHistoria() {
 }
 
 
-// 8. Criar a história quando o formulário é enviado
+
 
 form.addEventListener("submit", function(evento) {
     evento.preventDefault();
@@ -334,14 +328,13 @@ form.addEventListener("submit", function(evento) {
 });
 
 
-// 9. Gerar outra história com as mesmas escolhas
+
 
 againButton.addEventListener("click", function() {
     mostrarHistoria();
 });
 
 
-// 10. Copiar a história
 
 copyButton.addEventListener("click", async function() {
     const titulo = storyTitle.textContent;
