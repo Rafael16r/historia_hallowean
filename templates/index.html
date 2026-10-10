@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b080e">
+    <meta name="description"
+          content="Cria histórias de terror personalizadas com o Nightmare Generator.">
+
+    <title>Nightmare Generator | Cria o teu pesadelo</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="{{ url_for('static', filename='script.js') }}"
+            defer></script>
+</head>
+
+<body>
+
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <a class="brand" href="/" aria-label="Nightmare Generator - início">
+            <span class="brand-icon">☠</span>
+            NIGHTMARE<span class="brand-highlight">.</span>
+        </a>
+
+        <span class="status">
+            <span class="status-dot"></span>
+            LABORATÓRIO DE TERROR
+        </span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="moon" aria-hidden="true">🌕</div>
+
+            <p class="eyebrow">A TUA IMAGINAÇÃO. O TEU PESADELO.</p>
+
+            <h1>Cria uma história<br>
+                <span>de terror.</span>
+            </h1>
+
+            <p class="hero-description">
+                Escolhe os teus ingredientes, apaga as luzes
+                e descobre o que te espera na escuridão.
+            </p>
+        </section>
+
+        <section class="generator">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">01 / PERSONALIZAÇÃO</p>
+                    <h2>Constrói o teu pesadelo</h2>
+                </div>
+
+                <span class="skull" aria-hidden="true">👻</span>
+            </div>
+
+            <form id="story-form">
+
+                <div class="options-grid">
+
+                    <div class="option">
+                        <label for="local">📍 Onde começa?</label>
+
+                        <select id="local" name="local">
+                            <option value="casa">Casa abandonada</option>
+                            <option value="floresta">Floresta sombria</option>
+                            <option value="cemiterio">Cemitério antigo</option>
+                            <option value="hospital">Hospital abandonado</option>
+                            <option value="escola">Escola assombrada</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <label for="monstro">👹 Quem te persegue?</label>
+
+                        <select id="monstro" name="monstro">
+                            <option value="vampiro">Vampiro</option>
+                            <option value="zombie">Zombie</option>
+                            <option value="fantasma">Fantasma</option>
+                            <option value="lobisomem">Lobisomem</option>
+                            <option value="bruxa">Bruxa misteriosa</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <label for="personagem">🕵️ Quem és tu?</label>
+
+                        <select id="personagem" name="personagem">
+                            <option value="estudante">Estudante</option>
+                            <option value="detetive">Detetive</option>
+                            <option value="explorador">Explorador</option>
+                            <option value="jornalista">Jornalista</option>
+                            <option value="cientista">Cientista</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <label for="final">💀 Como termina?</label>
+
+                        <select id="final" name="final">
+                            <option value="assustador">Final assustador</option>
+                            <option value="feliz">Final feliz</option>
+                            <option value="inesperado">Final inesperado</option>
+                            <option value="misterioso">Final misterioso</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="primary-button" type="submit">
+                    <span>🎃</span>
+                    Criar a minha história
+                    <span class="button-arrow">→</span>
+                </button>
+
+                <p class="form-hint">
+                    Cada combinação esconde um novo pesadelo.
+                </p>
+
+            </form>
+        </section>
+
+        <section id="story" class="story" aria-live="polite" hidden>
+
+            <div class="story-top">
+                <div>
+                    <p class="section-label">02 / O TEU DESTINO</p>
+                    <h2>📖 A tua história</h2>
+                </div>
+
+                <span class="story-badge">HISTÓRIA GERADA</span>
+            </div>
+
+            <h3 id="story-title"></h3>
+
+            <div id="story-text" class="story-text"></div>
+
+            <div class="story-actions">
+                <button id="copy-button" class="secondary-button"
+                        type="button">
+                    📋 Copiar história
+                </button>
+
+                <button id="again-button" class="secondary-button"
+                        type="button">
+                    🎲 Gerar outra
+                </button>
+            </div>
+
+            <p id="copy-status" class="copy-status" aria-live="polite"></p>
+
+        </section>
+
+        <footer>
+            <p>Feito para os corajosos. E para quem não tem medo do escuro.</p>
+            <span>☠ NIGHTMARE GENERATOR · 2026</span>
+        </footer>
+
+    </main>
+
+</body>
+</html>
