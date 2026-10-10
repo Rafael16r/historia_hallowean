@@ -20,43 +20,28 @@
 
 <body>
 
-    <div class="background-glow" aria-hidden="true"></div>
-
-    <header class="topbar">
-        <a class="brand" href="/" aria-label="Nightmare Generator - início">
-            <span class="brand-icon">☠</span>
-            NIGHTMARE<span class="brand-highlight">.</span>
-        </a>
-
-        <span class="status">
-            <span class="status-dot"></span>
-            LABORATÓRIO DE TERROR
-        </span>
-    </header>
+  
 
     <main class="container">
 
         <section class="hero">
             <div class="moon" aria-hidden="true">🌕</div>
 
-            <p class="eyebrow">A TUA IMAGINAÇÃO. O TEU PESADELO.</p>
+            <p class="eyebrow">YOUR IMAGINATION. YOUR NIGHTMARE.</p>
 
-            <h1>Cria uma história<br>
-                <span>de terror.</span>
+            <h1>Create a <br>
+                <span>horror story</span>
             </h1>
 
-            <p class="hero-description">
-                Escolhe os teus ingredientes, apaga as luzes
-                e descobre o que te espera na escuridão.
-            </p>
+           
         </section>
 
         <section class="generator">
 
             <div class="section-heading">
                 <div>
-                    <p class="section-label">01 / PERSONALIZAÇÃO</p>
-                    <h2>Constrói o teu pesadelo</h2>
+                    <p class="section-label">01 / CUSTOMIZATION</p>
+                    <h2>Build Your Own Nightmare</h2>
                 </div>
 
                 <span class="skull" aria-hidden="true">👻</span>
@@ -67,49 +52,49 @@
                 <div class="options-grid">
 
                     <div class="option">
-                        <label for="local">📍 Onde começa?</label>
+                        <label for="local">📍 Where does it start?</label>
 
                         <select id="local" name="local">
-                            <option value="casa">Casa abandonada</option>
-                            <option value="floresta">Floresta sombria</option>
-                            <option value="cemiterio">Cemitério antigo</option>
-                            <option value="hospital">Hospital abandonado</option>
-                            <option value="escola">Escola assombrada</option>
+                            <option value="casa">Abandoned House</option>
+                            <option value="floresta">Dark Forest</option>
+                            <option value="cemiterio">Ancient Cemetery</option>
+                            <option value="hospital">Abandoned Hospital</option>
+                            <option value="escola">Haunted School</option>
                         </select>
                     </div>
 
                     <div class="option">
-                        <label for="monstro">👹 Quem te persegue?</label>
+                        <label for="monstro">👹 Who is chasing you?</label>
 
                         <select id="monstro" name="monstro">
-                            <option value="vampiro">Vampiro</option>
+                            <option value="vampiro">Vampire</option>
                             <option value="zombie">Zombie</option>
-                            <option value="fantasma">Fantasma</option>
-                            <option value="lobisomem">Lobisomem</option>
-                            <option value="bruxa">Bruxa misteriosa</option>
+                            <option value="fantasma">Ghost</option>
+                            <option value="lobisomem">Werewolf</option>
+                            <option value="bruxa">Mysterious Witch</option>
                         </select>
                     </div>
 
                     <div class="option">
-                        <label for="personagem">🕵️ Quem és tu?</label>
+                        <label for="personagem">🕵️ Who are you?</label>
 
                         <select id="personagem" name="personagem">
-                            <option value="estudante">Estudante</option>
-                            <option value="detetive">Detetive</option>
-                            <option value="explorador">Explorador</option>
-                            <option value="jornalista">Jornalista</option>
-                            <option value="cientista">Cientista</option>
+                            <option value="estudante">Student</option>
+                            <option value="detetive">Detective</option>
+                            <option value="explorador">Explorer</option>
+                            <option value="jornalista">Journalist</option>
+                            <option value="cientista">Scientist</option>
                         </select>
                     </div>
 
                     <div class="option">
-                        <label for="final">💀 Como termina?</label>
+                        <label for="final">💀 How does it end?</label>
 
                         <select id="final" name="final">
-                            <option value="assustador">Final assustador</option>
-                            <option value="feliz">Final feliz</option>
-                            <option value="inesperado">Final inesperado</option>
-                            <option value="misterioso">Final misterioso</option>
+                            <option value="assustador">Scary Ending</option>
+                            <option value="feliz">Happy Ending</option>
+                            <option value="inesperado">Unexpected Ending</option>
+                            <option value="misterioso">Mysterious Ending</option>
                         </select>
                     </div>
 
@@ -117,13 +102,11 @@
 
                 <button class="primary-button" type="submit">
                     <span>🎃</span>
-                    Criar a minha história
+                    Create my story
                     <span class="button-arrow">→</span>
                 </button>
 
-                <p class="form-hint">
-                    Cada combinação esconde um novo pesadelo.
-                </p>
+               
 
             </form>
         </section>
@@ -132,11 +115,11 @@
 
             <div class="story-top">
                 <div>
-                    <p class="section-label">02 / O TEU DESTINO</p>
-                    <h2>📖 A tua história</h2>
+                    <p class="section-label">02 / YOUR DESTINY</p>
+                    <h2>📖 Your Story</h2>
                 </div>
 
-                <span class="story-badge">HISTÓRIA GERADA</span>
+                <span class="story-badge">STORY GENERATED</span>
             </div>
 
             <h3 id="story-title"></h3>
@@ -146,12 +129,12 @@
             <div class="story-actions">
                 <button id="copy-button" class="secondary-button"
                         type="button">
-                    📋 Copiar história
+                    📋 Copy Story
                 </button>
 
                 <button id="again-button" class="secondary-button"
                         type="button">
-                    🎲 Gerar outra
+                    🎲 Generate Another
                 </button>
             </div>
 
@@ -159,10 +142,7 @@
 
         </section>
 
-        <footer>
-            <p>Feito para os corajosos. E para quem não tem medo do escuro.</p>
-            <span>☠ NIGHTMARE GENERATOR · 2026</span>
-        </footer>
+        
 
     </main>
 

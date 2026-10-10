@@ -1,4 +1,4 @@
-"use strict";
+
 
 // 1. Encontrar os elementos da página
 
@@ -21,47 +21,47 @@ const copyStatus = document.querySelector("#copy-status");
 
 const locais = {
     casa: {
-        nome: "casa abandonada",
+        nome: "abandoned house",
         ambiente: [
-            "As janelas estavam partidas e o vento fazia as portas ranger.",
-            "O chão estava coberto de pó e fotografias antigas observavam cada movimento.",
-            "Um relógio parado marcava a meia-noite, apesar de ainda serem onze horas."
+            "The windows were broken, and the wind made the doors creak.",
+            "The floor was covered in dust and old photographs observed every movement.",
+            "A stopped clock marked midnight, despite it still being eleven o'clock."
         ]
     },
 
     floresta: {
-        nome: "floresta sombria",
+        nome: "dark forest",
         ambiente: [
-            "As árvores eram tão altas que escondiam a lua.",
-            "Uma névoa espessa cobria o chão e escondia tudo a poucos metros de distância.",
-            "Os ramos estalavam atrás de ti, embora não houvesse vento."
+            "The trees were so tall that they hid the moon.",
+            "A thick fog covered the ground and hid everything within a few meters.",
+            "The branches cracked behind you, even though there was no wind."
         ]
     },
 
     cemiterio: {
-        nome: "cemitério antigo",
+        nome: "ancient cemetery",
         ambiente: [
-            "As lápides estavam cobertas de musgo e uma névoa fria pairava sobre as campas.",
-            "Uma campa acabada de abrir destacava-se entre as restantes.",
-            "O portão de ferro fechou-se sozinho assim que entraste."
+            "The gravestones were covered in moss and a cold fog hovered over the graves.",
+            "A freshly dug grave stood out among the others.",
+            "The iron gate closed by itself the moment you entered."
         ]
     },
 
     hospital: {
-        nome: "hospital abandonado",
+        nome: "abandoned hospital",
         ambiente: [
-            "Os corredores estavam escuros e uma porta batia ao longe.",
-            "As luzes piscavam e um monitor antigo começou a emitir um sinal sonoro.",
-            "Uma cadeira de rodas atravessou o corredor sem que ninguém a empurrasse."
+            "The corridors were dark and a door slammed in the distance.",
+            "The lights flickered and an old monitor began to emit a strange sound.",
+            "A wheelchair rolled down the corridor without anyone pushing it."
         ]
     },
 
     escola: {
-        nome: "escola assombrada",
+        nome: "haunted school",
         ambiente: [
-            "As salas estavam vazias, mas ouvia-se uma turma a sussurrar.",
-            "No quadro apareceu o teu nome, escrito por uma mão invisível.",
-            "O sino tocou três vezes, apesar de a escola estar fechada há anos."
+            "The classrooms were empty, but you could hear a group of students whispering.",
+            "Your name appeared on the board, written by an invisible hand.",
+            "The bell rang three times, even though the school had been closed for years."
         ]
     }
 };
@@ -71,72 +71,72 @@ const locais = {
 
 const monstros = {
     vampiro: {
-        nome: "vampiro",
+        nome: "vampire",
         aparencia: [
-            "Uma figura pálida surgiu na escuridão, com olhos vermelhos e um sorriso inquietante.",
-            "Duas sombras compridas apareceram na parede antes de conseguires ver o vampiro.",
-            "Um vulto elegante aproximou-se, revelando presas brilhantes à luz da lua."
+            "A pale figure emerged from the darkness, with red eyes and a haunting smile.",
+            "Two long shadows appeared on the wall before you could see the vampire.",
+            "An elegant silhouette approached, revealing brilliant fangs in the light of the moon."
         ],
         acao: [
-            "O vampiro aproximou-se lentamente e perguntou pelo teu nome.",
-            "O vampiro fechou a única saída e apagou todas as luzes.",
-            "O vampiro apontou para uma porta e sussurrou que não devias abri-la."
+            "The vampire approached slowly and asked for your name.",
+            "The vampire closed the only exit and turned off all the lights.",
+            "The vampire pointed to a door and whispered that you shouldn't open it."
         ]
     },
 
     zombie: {
         nome: "zombie",
         aparencia: [
-            "Um zombie surgiu a arrastar os pés, com os olhos vazios e as mãos estendidas.",
-            "Um gemido rouco ecoou pelo espaço e uma figura cambaleante apareceu.",
-            "Uma criatura coberta de terra levantou-se lentamente do chão."
+            "A zombie emerged dragging its feet, with empty eyes and outstretched hands.",
+            "A rough groan echoed through the space and a staggering figure appeared.",
+            "A creature covered in dirt rose slowly from the ground."
         ],
         acao: [
-            "O zombie começou a perseguir-te, batendo contra tudo pelo caminho.",
-            "O zombie parou de repente e apontou para algo atrás de ti.",
-            "O zombie bateu três vezes numa porta que parecia estar trancada por dentro."
+            "The zombie began to chase you, slamming into everything in its path.",
+            "The zombie stopped suddenly and pointed to something behind you.",
+            "The zombie knocked three times on a door that seemed to be locked from the inside."
         ]
     },
 
     fantasma: {
         nome: "fantasma",
         aparencia: [
-            "Um vulto transparente surgiu no ar, rodeado por uma luz azulada.",
-            "Uma figura pálida apareceu ao fundo, sem tocar no chão.",
-            "Uma voz sussurrou o teu nome e uma silhueta atravessou a parede."
+            "A transparent figure emerged in the air, surrounded by a blue light.",
+            "A pale figure appeared in the background, not touching the ground.",
+            "A mysterious woman held a book covered in strange symbols."
         ],
         acao: [
-            "O fantasma apontou para um espelho onde aparecia uma figura desconhecida.",
-            "O fantasma aproximou-se e mostrou-te uma memória que não era tua.",
-            "O fantasma desapareceu, mas os seus passos continuaram a ouvir-se."
+            "The ghost pointed to a mirror where an unknown figure appeared.",
+            "The ghost approached and showed you a memory that wasn't yours.",
+            "The ghost disappeared, but its footsteps continued to be heard."
         ]
     },
 
     lobisomem: {
         nome: "lobisomem",
         aparencia: [
-            "Uma criatura enorme surgiu entre as sombras, com garras afiadas.",
-            "Um uivo arrepiante fez tremer as janelas e duas luzes amarelas apareceram na escuridão.",
-            "Uma silhueta coberta de pelo levantou-se lentamente sobre duas patas."
+            "A huge creature emerged from the shadows, with sharp claws.",
+            "A chilling howl made the windows tremble and two yellow lights appeared in the darkness.",
+            "A furry silhouette rose slowly on all fours."
         ],
         acao: [
-            "O lobisomem correu na tua direção e bloqueou o caminho de regresso.",
-            "O lobisomem rodeou-te em silêncio, à espera do momento certo.",
-            "O lobisomem recuou de repente, como se tivesse reconhecido o teu rosto."
+            "The werewolf ran towards you and blocked the path of retreat.",
+            "The werewolf circled you in silence, waiting for the right moment.",
+            "The werewolf suddenly retreated, as if it had recognized your face."
         ]
     },
 
     bruxa: {
         nome: "bruxa",
         aparencia: [
-            "Uma bruxa de olhos brilhantes surgiu junto a uma vela negra.",
-            "Uma gargalhada ecoou e uma figura encapuzada apareceu no meio da névoa.",
-            "Uma mulher misteriosa segurava um livro coberto de símbolos estranhos."
+            "A witch with glowing eyes emerged next to a black candle.",
+            "A cackle echoed and a hooded figure appeared in the middle of the mist.",
+            "A mysterious woman held a book covered in strange symbols."
         ],
         acao: [
-            "A bruxa pronunciou uma palavra e todas as portas se fecharam.",
-            "A bruxa ofereceu-te uma saída, mas exigiu algo em troca.",
-            "A bruxa apontou para o chão, onde a tua sombra começou a mover-se sozinha."
+            "The witch spoke a spell and all the doors closed.",
+            "The witch offered you a way out, but demanded something in return.",
+            "The witch pointed to the ground, where your shadow began to move on its own."
         ]
     }
 };
@@ -146,47 +146,47 @@ const monstros = {
 
 const personagens = {
     estudante: {
-        nome: "estudante",
+        nome: "student",
         inicio: [
-            "Depois das aulas, decidiste explorar um lugar que todos evitavam.",
-            "Estavas a regressar a casa quando encontraste uma mensagem misteriosa.",
-            "Uma aposta com os teus amigos levou-te até um lugar proibido."
+            "After classes, you decided to explore a place that everyone avoided.",
+            "You were on your way home when you found a mysterious message.",
+            "A bet with your friends led you to a forbidden place."
         ]
     },
 
     detetive: {
-        nome: "detetive",
+        nome: "detective",
         inicio: [
-            "Estavas a investigar um desaparecimento que ninguém conseguia explicar.",
-            "Recebeste uma carta anónima com uma morada escrita à mão.",
-            "Uma pista encontrada numa cena de crime levou-te até ali."
+            "You were investigating a disappearance that no one could explain.",
+            "You received an anonymous letter with a location written by hand.",
+            "A clue found at a crime scene led you to that place."
         ]
     },
 
     explorador: {
-        nome: "explorador",
+        nome: "explorer",
         inicio: [
-            "Procuravas um lugar lendário que não aparecia em nenhum mapa.",
-            "A tua expedição perdeu-se depois de uma tempestade inesperada.",
-            "Encontraste uma passagem escondida e decidiste investigar."
+            "You were searching for a legendary place that didn't appear on any map.",
+            "Your expedition got lost after an unexpected storm.",
+            "You found a hidden passage and decided to investigate."
         ]
     },
 
     jornalista: {
-        nome: "jornalista",
+        nome: "journalist",
         inicio: [
-            "Estavas a investigar uma lenda local para escrever uma reportagem.",
-            "Recebeste uma gravação anónima com sons impossíveis de explicar.",
-            "Uma testemunha insistiu que precisava de te contar a verdade."
+            "You were investigating a local legend to write an article.",
+            "You received an anonymous recording with unexplainable sounds.",
+            "A witness insisted that they needed to tell you the truth."
         ]
     },
 
     cientista: {
-        nome: "cientista",
+        nome: "scientist",
         inicio: [
-            "Seguias uma pista sobre uma experiência que tinha corrido mal.",
-            "Um sinal desconhecido levou-te até um local isolado.",
-            "Estavas a investigar um fenómeno que desafiava todas as leis conhecidas."
+            "You were following a lead about a failed experiment.",
+            "An unknown signal led you to an isolated location.",
+            "You were investigating a phenomenon that defied all known laws."
         ]
     }
 };
@@ -221,57 +221,57 @@ function gerarHistoria() {
     // Escolher o desfecho
 
     if (tipoFinal === "feliz") {
-        titulo = "Uma fuga impossível";
+        titulo = "An Impossible Escape";
 
         fim = escolherAleatorio([
-            "No último instante, encontraste uma saída secreta e conseguiste escapar. Quando olhaste para trás, a criatura tinha desaparecido.",
+            "At the last moment, you found a secret passage and managed to escape. When you looked back, the creature had disappeared.",
 
-            "Uma luz surgiu ao fundo do corredor. Correste até ela e chegaste à rua mesmo antes de o sol nascer. Estavas a salvo... por agora.",
+            "A light appeared at the end of the corridor. You ran towards it and made it to the street just before the sun rose. You were safe... for now.",
 
-            "Descobriste que o monstro tinha medo de um objeto antigo que encontraste no chão. Aproveitaste a oportunidade e fugiste."
+            "You discovered that the monster was afraid of an ancient object you found on the ground. You seized the opportunity and fled."
         ]);
     }
 
     else if (tipoFinal === "assustador") {
-        titulo = "O último grito";
+        titulo = "The Last Scream";
 
         fim = escolherAleatorio([
-            "Tentaste fugir, mas todas as saídas estavam bloqueadas. A última coisa que ouviste foi um sussurro junto ao teu ouvido. Na manhã seguinte, ninguém encontrou qualquer vestígio teu.",
+            "You tried to run, but all exits were blocked. The last thing you heard was a whisper by your ear. The next morning, no one found any trace of you.",
 
-            "As luzes apagaram-se de repente. Ouviste passos a aproximarem-se, mas não conseguiste ver ninguém. Depois, fez-se um silêncio absoluto.",
+            "The lights went out suddenly. You heard footsteps approaching, but couldn't see anyone. Then, absolute silence fell.",
 
-            "Pensaste ter encontrado a saída, mas a porta abriu-se para o mesmo corredor. Atrás de ti, a criatura começou a rir."
+            "You thought you had found the exit, but the door opened to the same corridor. Behind you, the creature began to laugh."
         ]);
     }
 
     else if (tipoFinal === "inesperado") {
-        titulo = "Nada era o que parecia";
+        titulo = "Nothing was what it seemed";
 
         fim = escolherAleatorio([
-            "Quando a criatura retirou o capuz, reconheceste o teu próprio rosto. Antes de conseguires reagir, ela sorriu e desapareceu. No espelho, porém, o teu reflexo continuava a sorrir.",
+            "When the creature removed the hood, you recognized your own face. Before you could react, it smiled and disappeared. In the mirror, however, your reflection continued to smile.",
 
-            "Encontraste uma fotografia tua no chão, datada de cem anos antes. No verso, alguém tinha escrito: «Finalmente voltaste».",
+            "You found a photograph of yourself on the ground, dated a hundred years ago. On the back, someone had written: «Finally you're back».",
 
-            "A criatura parou e começou a falar com a tua voz. Percebeste então que ela conhecia todos os teus segredos."
+            "The creature stopped and began to speak with your voice. You realized then that it knew all your secrets."
         ]);
     }
 
     else {
-        titulo = "O mistério continua";
+        titulo = "The mystery continues";
 
         fim = escolherAleatorio([
-            "Encontraste uma porta aberta e saíste sem olhar para trás. No dia seguinte, o lugar já não existia em nenhum mapa.",
+            "You found an open door and left without looking back. The next day, the place no longer existed on any map.",
 
-            "Quando tudo ficou em silêncio, reparaste numa nova mensagem escrita na parede: «Isto foi apenas o começo».",
+            "When everything fell silent, you noticed a new message written on the wall: «This was only the beginning».",
 
-            "Conseguiste sair, mas uma pequena marca apareceu na tua mão. Sempre que a lua fica cheia, a marca começa a brilhar."
+            "You managed to escape, but a small mark appeared on your hand. Whenever the moon is full, the mark begins to glow."
         ]);
     }
 
     // Criar os parágrafos da história
 
     const paragrafos = [
-        `Era uma noite sombria quando um ${personagem.nome} chegou à ${local.nome}. ${inicio}`,
+        `It was a dark night when a ${personagem.nome} arrived at the ${local.nome}. ${inicio}`,
 
         ambiente,
 
@@ -352,11 +352,11 @@ copyButton.addEventListener("click", async function() {
     try {
         await navigator.clipboard.writeText(conteudo);
 
-        copyStatus.textContent = "✓ História copiada com sucesso!";
+        copyStatus.textContent = "✓ History copied successfully!";
     }
 
     catch (erro) {
         copyStatus.textContent =
-            "Não foi possível copiar automaticamente. Seleciona e copia o texto manualmente.";
+            "Automatic copying failed. Please select and copy the text manually..";
     }
 });
