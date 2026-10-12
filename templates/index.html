@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -18,22 +19,37 @@
             defer></script>
 </head>
 
+
 <body>
 
-  
+    <video class="background-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="{{ url_for('static', filename='media/hallowean.mp4') }}" type="video/mp4">
+    </video>
+
+    <div class="video-overlay" aria-hidden="true"></div>
+
+    <div class="atmosphere" aria-hidden="true">
+        <div class="fog fog-one"></div>
+        <div class="fog fog-two"></div>
+        <div class="particles"></div>
+    </div>
 
     <main class="container">
+
 
         <section class="hero">
             <div class="moon" aria-hidden="true">🌕</div>
 
             <p class="eyebrow">YOUR IMAGINATION. YOUR NIGHTMARE.</p>
 
-            <h1>Create a <br>
+            <h1>
+                Create a<br>
                 <span>horror story</span>
             </h1>
 
-           
+            <p class="hero-description">
+                Enter the darkness and create a nightmare of your own.
+            </p>
         </section>
 
         <section class="generator">
@@ -53,7 +69,6 @@
 
                     <div class="option">
                         <label for="local">📍 Where does it start?</label>
-
                         <select id="local" name="local">
                             <option value="casa">Abandoned House</option>
                             <option value="floresta">Dark Forest</option>
@@ -65,7 +80,6 @@
 
                     <div class="option">
                         <label for="monstro">👹 Who is chasing you?</label>
-
                         <select id="monstro" name="monstro">
                             <option value="vampiro">Vampire</option>
                             <option value="zombie">Zombie</option>
@@ -77,7 +91,6 @@
 
                     <div class="option">
                         <label for="personagem">🕵️ Who are you?</label>
-
                         <select id="personagem" name="personagem">
                             <option value="estudante">Student</option>
                             <option value="detetive">Detective</option>
@@ -89,7 +102,6 @@
 
                     <div class="option">
                         <label for="final">💀 How does it end?</label>
-
                         <select id="final" name="final">
                             <option value="assustador">Scary Ending</option>
                             <option value="feliz">Happy Ending</option>
@@ -105,8 +117,6 @@
                     Create my story
                     <span class="button-arrow">→</span>
                 </button>
-
-               
 
             </form>
         </section>
@@ -142,7 +152,10 @@
 
         </section>
 
-        
+        <footer class="footer">
+            <p>Every nightmare begins with a single choice.</p>
+            <span>☾</span>
+        </footer>
 
     </main>
 
